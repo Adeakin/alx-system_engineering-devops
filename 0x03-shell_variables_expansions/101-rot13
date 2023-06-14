@@ -1,2 +1,2 @@
 #!/bin/bash
-chown -h vincent:staff _hello
+tr 'A-Za-z' 'N-ZA-Mn-za-m'
