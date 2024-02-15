@@ -12,3 +12,12 @@ _This project will be manually reviewed._
 * As each task is completed, the name of that task will turn green
 * Create a screenshot, showing that you completed the required levels
 * Push this screenshot with the right name to GitHub, in either the PNG or JPEG format
+
+## Steps i followed to use the SFTP command-line tool.
+- I opened the command prompt on my local machine.
+- Copied and input SFTP command and password provided on the ALX sandbox environment.
+- Naviagted to alx-system_engineering-devops
+- Navigated to the directory command_line_for_the_win
+- Used the command `lls` to view local files/folders on my machine
+- Used the command `lcd [file_name]` to change into the folder/file i want to upload.
+- Used the command `put [file_name]` to upload the file into SFTP.
