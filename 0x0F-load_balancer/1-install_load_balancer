@@ -34,14 +34,14 @@ defaults
   timeout server 15s
   timeout http-request 10s
 
-frontend clickviral-tech-frontend
+frontend bimscodes-tech-frontend
     bind *:80
-    default_backend clickviral-tech-backend
+    default_backend bimscode-tech-backend
 
-backend clickviral-tech-backend
+backend bimscodes-tech-backend
     balance roundrobin
-    server 151666-web-01 52.207.135.194:80 check
-    server 151666-web-02 54.173.38.70:80 check
+    server 302797-web-01 52.207.135.194:80 check
+    server 302797-web-02 54.173.38.70:80 check
 "
 
 # shellcheck disable=SC2154
