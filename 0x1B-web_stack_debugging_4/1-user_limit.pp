@@ -1,12 +1,12 @@
-# Reconfigure the OS for 'holberton' to login and open a file without any error message
+# Fix problem of high amount files opened
 
-exec { 'increase-hard-file-limit-holberton-user':
-  command => 'sed -i "/holberton hard/s/4/50000/" /etc/security/limits.conf',
-  path    => '/usr/local/bin/:/bin/'
+exec {'replace-1':
+  provider => shell,
+  command  => 'sudo sed -i "s/nofile 5/nofile 50000/" /etc/security/limits.conf',
+  before   => Exec['replace-2'],
 }
 
-exec { 'increase-soft-file-limit-for-holberton-user':
-  command => 'sed -i "/holberton soft/s/5/50000/" /etc/security/limits.conf',
-  path    => '/usr/local/bin/:/bin/'
+exec {'replace-2':
+  provider => shell,
+  command  => 'sudo sed -i "s/nofile 4/nofile 40000/" /etc/security/limits.conf',
 }
-
